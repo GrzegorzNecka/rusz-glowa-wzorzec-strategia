@@ -20,4 +20,17 @@ class LatamBoMamSkrzydla extends LatanieInterfejs {
   }
 }
 
-export { LatanieInterfejs as default, LatamBoMamSkrzydla };
+// --------------------------------------------
+
+class NieLatam extends LatanieInterfejs {
+  constructor() {
+    super();
+    this.message = "nie latam bo jestem z plastiku";
+  }
+
+  lec() {
+    return super.lec(this.message);
+  }
+}
+
+export { LatanieInterfejs as default, LatamBoMamSkrzydla, NieLatam };

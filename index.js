@@ -1,15 +1,20 @@
 // Import stylesheets
 import "./style.css";
-import Kaczka, { DzikaKaczka } from "./kaczka";
+import Kaczka, { DzikaKaczka, GumowaKaczka } from "./kaczka";
 
 const appDiv = document.getElementById("app");
 
 // ------------------
 const kaczka = new Kaczka();
-kaczka.wykonajLec();
-
 const dikaKaczka = new DzikaKaczka();
-dikaKaczka.wykonajLec();
+const gumowaKaczka = new GumowaKaczka();
 
 // ------------------
-appDiv.innerHTML = `${dikaKaczka.wykonajLec()}`;
+
+function kaczkaProgram(kaczka) {
+  appDiv.innerHTML = `${kaczka.wykonajLec()} i ${kaczka.wykonajKwacz()}`;
+}
+
+kaczkaProgram(kaczka);
+kaczkaProgram(dikaKaczka);
+kaczkaProgram(gumowaKaczka);

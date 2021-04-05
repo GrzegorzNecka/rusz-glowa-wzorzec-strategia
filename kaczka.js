@@ -1,8 +1,14 @@
-import LatanieInterfejs, { LatamBoMamSkrzydla } from "./latanieInterfejs";
+import LatanieInterfejs, {
+  LatamBoMamSkrzydla,
+  NieLatam
+} from "./latanieInterfejs";
+
+import KwakanieInterfejs, { Kwakam, Piszcze } from "./kwakanieInterfejs";
 
 class Kaczka {
   constructor() {
     this.latanieInterfejs = new LatanieInterfejs();
+    this.kwakanieInterfejs = new KwakanieInterfejs();
   }
 
   plywaj() {
@@ -12,6 +18,10 @@ class Kaczka {
   wykonajLec() {
     return this.latanieInterfejs.lec();
   }
+
+  wykonajKwacz() {
+    return this.kwakanieInterfejs.kwacz();
+  }
 }
 
 // --------------------------------------------
@@ -20,7 +30,18 @@ class DzikaKaczka extends Kaczka {
   constructor() {
     super();
     this.latanieInterfejs = new LatamBoMamSkrzydla();
+    this.kwakanieInterfejs = new Kwakam();
   }
 }
 
-export { Kaczka as default, DzikaKaczka };
+// --------------------------------------------
+
+class GumowaKaczka extends Kaczka {
+  constructor() {
+    super();
+    this.latanieInterfejs = new NieLatam();
+    this.kwakanieInterfejs = new Piszcze();
+  }
+}
+
+export { Kaczka as default, DzikaKaczka, GumowaKaczka };
