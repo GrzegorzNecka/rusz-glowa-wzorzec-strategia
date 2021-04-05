@@ -1,37 +1,11 @@
 // Import stylesheets
-import './style.css';
-
+import "./style.css";
+import Kaczka from "./kaczka";
 // Write Javascript code!
-const appDiv = document.getElementById('app');
+const appDiv = document.getElementById("app");
 appDiv.innerHTML = `<h1>JS Starter</h1>`;
 
 // WZORZEC STRATEGIA //
 
-
-// klasa abstrakcyjna, która nigdy nie będzie publiczna
-class AbstractKaczka {
-  constructor(latanieInterfejs, kwakanieInterfejs) {
-    this.latanieInterfejs = latanieInterfejs;
-    this.kwakanieInterfejs = kwakanieInterfejs;
-  }
-
-  plywaj(){
-    console.log('pływaj')
-  }
-  wykonajKwacz(){
-    kwakanieInterfejs.kwacz()
-  }
-   wykonajLeć(){
-    latanieInterfejs.lec()
-  }
-}
-
-
-class DzikaKaczka extends AbstractKaczka {
-constructor(latanieInterfejs, kwakanieInterfejs) {
-    super(latanieInterfejs, kwakanieInterfejs)
-
-      kwakanieInterfejs = new Kwacz()
-      latanieInterfejs = new 
-  }
-}
+let k = new Kaczka();
+k.wykonajLec();
