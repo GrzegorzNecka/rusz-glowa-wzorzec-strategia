@@ -1,4 +1,4 @@
-import LatanieInterfejs from "./latanieInterfejs";
+import LatanieInterfejs, { LatamBoMamSkrzydla } from "./latanieInterfejs";
 
 class Kaczka {
   constructor() {
@@ -10,9 +10,17 @@ class Kaczka {
   }
 
   wykonajLec() {
-    console.log(this.latanieInterfejs.lec())
-    
+    console.log(this.latanieInterfejs.lec());
   }
 }
 
-export default Kaczka;
+// --------------------------------------------
+
+class DzikaKaczka extends Kaczka {
+  constructor() {
+    super();
+    this.latanieInterfejs = new LatamBoMamSkrzydla();
+  }
+}
+
+export { Kaczka as default, DzikaKaczka };
