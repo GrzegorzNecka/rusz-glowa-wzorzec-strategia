@@ -5,6 +5,8 @@ import LatanieInterfejs, {
 
 import KwakanieInterfejs, { Kwakam, Piszcze } from "./kwakanieInterfejs";
 
+// --------------------------------------------
+
 class Kaczka {
   constructor() {
     this.latanieInterfejs = new LatanieInterfejs();
@@ -12,7 +14,15 @@ class Kaczka {
   }
 
   plywaj() {
-    return "pływaj";
+    return "jestem kaczką która pływa";
+  }
+
+  ustawLatanieInterfejs(newInterfejs = new LatanieInterfejs()) {
+    this.kwakanieInterfejs = newInterfejs;
+  }
+
+  ustawKwakanieInterfejs(newInterfejs = new KwakanieInterfejs()) {
+    this.kwakanieInterfejs = newInterfejs;
   }
 
   wykonajLec() {
