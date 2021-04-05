@@ -28,8 +28,10 @@ class AbstractKaczka {
 
 
 class DzikaKaczka extends AbstractKaczka {
-constructor() {
-    super()
+constructor(latanieInterfejs, kwakanieInterfejs) {
+    super(latanieInterfejs, kwakanieInterfejs)
 
+      kwakanieInterfejs = new Kwacz()
+      latanieInterfejs = new 
   }
 }
