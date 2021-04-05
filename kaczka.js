@@ -6,11 +6,11 @@ class Kaczka {
   }
 
   plywaj() {
-    console.log("pływaj");
+    return "pływaj";
   }
 
   wykonajLec() {
-    console.log(this.latanieInterfejs.lec());
+    return this.latanieInterfejs.lec();
   }
 }
 
